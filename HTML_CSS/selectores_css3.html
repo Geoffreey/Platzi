@@ -1,11 +1,59 @@
+<!--TIPOS DE SELECTORES
+-PSEUDOCLASES
+   :active
+   :focues
+   :houever
+   :nth-child(n)
+-PSEUDOELEMENTOS
+   ::after
+   ::before
+   ::first-letter
+   ::placeholder
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        p {
+            color:blue;
+        }
+
+        p:hover {
+            color: skyblue;
+        }
+
+        div p:nth-child(2) {
+            color: red;
+        }
+
+        p::first-letter {
+            color: teal;
+        }
+
+        p::before {
+            content: "😎";
+        }
+
+        p::after {
+            content: "😁";
+        }
+
+        ::placeholder {
+            color: tomato;
+        }
+    </style>
 </head>
 <body>
+    <p>HOLA</p>
+    <div>
+        <p>PLATZI</p>
+        <P>MASTER</P>
+        <P>LO MEJOR</P>
+    </div>
+    <input type="text" placeholder="name">
     
 </body>
 </html>
