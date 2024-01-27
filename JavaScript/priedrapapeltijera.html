@@ -6,6 +6,21 @@
       function aleatorio(min, max) {
         return Math.floor(Math.random() * (max - min + 1) + min);
       }
+
+      //REFACTOR DEL CODIGO USANDO FUNCNIONES
+      function eleccion(jugada) {
+        let resultado = "";
+        if (jugada == 1) {
+          resultado = "Piedra 🥌";
+        } else if (jugada == 2) {
+          resultado = "Papel 📄";
+        } else if (jugada == 3) {
+          resultado = "Tijera ✂";
+        } else {
+          resultado = "MAL ELEGIDO";
+        }
+        return resultado;
+      }
       //1 es piedra, 2 es papel, 3 es tijera
       let jugador = 0;
       let min = 1;
@@ -14,8 +29,9 @@
       jugador = prompt("Elige: 1 para piedra, 2 para papel y 3 para tijera");
 
       //alert("elegiste" + jugador)
-
-      if (jugador == 1) {
+      alert("PC elige:" + eleccion(pc));
+      alert("Tu eliges:" + eleccion(jugador));
+      /*if (jugador == 1) {
         alert("Elegiste 🥌");
       } else if (jugador == 2) {
         alert("Elegiste 📃");
@@ -33,7 +49,7 @@
         alert("pc elige ✂");
       } else {
         alert("pc elige PERDER");
-      }
+      }*/
 
       //COMBATE
 
